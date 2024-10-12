@@ -1,13 +1,11 @@
-import { Route, Routes, HashRouter, Navigate } from 'react-router-dom';
-import { App } from './App';
-import { HomePage } from './components/pages/HomePage';
-import { PeoplePage } from './components/pages/PeoplePage';
-import { NotFoundPage } from './components/pages/NotFoundPage';
-import { FC } from 'react';
+import { Route, Routes, HashRouter, Navigate } from "react-router-dom";
+import { App } from "./App";
+import { HomePage } from "./components/pages/HomePage";
+import { PeoplePage } from "./components/pages/PeoplePage";
+import { NotFoundPage } from "./components/pages/NotFoundPage";
 
-export const Root: FC = () => {
-  return (
-    <HashRouter>
+export const Root = () => (
+  <HashRouter>
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<HomePage />} />
@@ -22,5 +20,4 @@ export const Root: FC = () => {
         </Route>
       </Routes>
     </HashRouter>
-  );
-};
+);
